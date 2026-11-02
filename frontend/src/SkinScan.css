@@ -1,0 +1,697 @@
+.skin-scan-page {
+  min-height: 100vh;
+  background: #f7f7f1;
+  color: #29382f;
+}
+
+.scan-header {
+  height: 76px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e7e9df;
+}
+
+.scan-back {
+  border: 0;
+  background: transparent;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  color: #68766b;
+  cursor: pointer;
+}
+
+.scan-brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.scan-main {
+  width: min(850px, 92%);
+  margin: 55px auto;
+}
+
+.scan-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.scan-eyebrow {
+  color: #8b9b7b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.scan-heading h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(34px, 5vw, 48px);
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.scan-heading p,
+.scan-results > p {
+  color: #7a857a;
+  line-height: 1.7;
+  max-width: 570px;
+  margin: auto;
+}
+
+.scan-card,
+.scan-results,
+.recommendation-results {
+  background: white;
+  border: 1px solid #eaede5;
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 12px 35px #34412b0b;
+}
+
+.scan-upload-area {
+  min-height: 300px;
+}
+
+.scan-dropzone {
+  width: 100%;
+  min-height: 290px;
+  background: #fafbf7;
+  border: 1.5px dashed #cbd4c1;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #354438;
+}
+
+.scan-upload-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #eaf0e3;
+  display: grid;
+  place-items: center;
+  color: #71866a;
+}
+
+.scan-dropzone h3 {
+  margin: 17px 0 5px;
+}
+
+.scan-dropzone p,
+.scan-dropzone small {
+  color: #899288;
+}
+
+.scan-browse,
+.scan-change {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #71866a;
+  color: white;
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 18px;
+  margin: 12px 0;
+  cursor: pointer;
+}
+
+.scan-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.scan-preview img {
+  width: min(100%, 300px);
+  height: 330px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.scan-change {
+  margin: 0;
+}
+
+.scan-change:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.scan-guidelines {
+  background: #fafbf7;
+  border-radius: 14px;
+  padding: 20px;
+  margin: 22px 0;
+}
+
+.scan-guidelines h3 {
+  margin: 0 0 13px;
+  font-size: 15px;
+}
+
+.scan-guidelines ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scan-guidelines li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  color: #718071;
+}
+
+.scan-guidelines li svg {
+  color: #849b77;
+  flex-shrink: 0;
+}
+
+.scan-submit {
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  border-radius: 11px;
+  background: #71866a;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.scan-submit:hover:not(:disabled) {
+  background: #60765a;
+  transform: translateY(-1px);
+}
+
+.scan-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.scan-status {
+  text-align: center;
+  color: #71866a;
+  font-size: 13px;
+  margin: 17px 0 0;
+}
+
+.scan-error {
+  margin-top: 15px;
+  padding: 13px;
+  background: #fff1ed;
+  color: #a34e3d;
+  border-radius: 9px;
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.scan-error svg {
+  flex-shrink: 0;
+}
+
+.scan-results {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.scan-results h2,
+.recommendation-results h2 {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.scan-result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.scan-result-item {
+  background: #f7f8f3;
+  padding: 18px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-transform: capitalize;
+}
+
+.scan-result-item span {
+  font-size: 13px;
+  color: #7b8879;
+}
+
+.scan-result-item strong {
+  font-size: 27px;
+}
+
+.scan-result-item small {
+  color: #9aa395;
+}
+
+.scan-json {
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #f7f8f3;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.scan-spinner {
+  animation: scan-spin 1s linear infinite;
+}
+
+@keyframes scan-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.results-intro {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.results-intro h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 12px 0;
+}
+
+.results-intro p {
+  color: #7a857a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.overall-score-card {
+  background: #71866a;
+  color: white;
+  border-radius: 16px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.overall-score-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.overall-score-card span {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.overall-score-card small {
+  opacity: 0.8;
+}
+
+.overall-score-card strong {
+  font-family: Georgia, serif;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.skin-type-card,
+.skin-age-card,
+.recommendation-skin-type {
+  background: #f7f8f3;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 16px;
+}
+
+.result-label,
+.skin-age-card > span,
+.recommendation-skin-type > span {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: #899780;
+}
+
+.skin-type-card h3,
+.recommendation-skin-type h3 {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: 400;
+  margin: 10px 0 20px;
+}
+
+.skin-type-regions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.skin-type-regions div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skin-type-regions span,
+.regional-item span {
+  font-size: 12px;
+  color: #899288;
+}
+
+.skin-type-regions strong {
+  font-size: 14px;
+  color: #354438;
+}
+
+.skin-age-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.skin-age-card > span {
+  margin-right: auto;
+}
+
+.skin-age-card strong {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.skin-age-card small {
+  color: #899288;
+}
+
+.results-section-heading {
+  margin: 30px 0 17px;
+  text-align: left;
+}
+
+.results-section-heading h3 {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 7px;
+}
+
+.results-section-heading p {
+  font-size: 13px;
+  color: #899288;
+  margin: 0;
+}
+
+.regional-results {
+  margin-top: 25px;
+}
+
+.regional-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.regional-item {
+  background: #f7f8f3;
+  padding: 17px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.regional-item strong {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.results-disclaimer {
+  margin-top: 25px;
+  padding: 14px;
+  background: #fafbf7;
+  border-radius: 10px;
+  color: #899288;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Skincare recommendation call-to-action */
+.recommendation-trigger {
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px solid #e5eadf;
+  border-radius: 16px;
+  background: #fafbf7;
+  text-align: left;
+}
+
+.recommendation-trigger h3 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 10px 0 8px;
+}
+
+.recommendation-trigger p {
+  color: #7a857a;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+  max-width: 580px;
+}
+
+.recommendation-trigger .scan-submit {
+  max-width: 100%;
+}
+
+/* Generated skincare plan */
+.recommendation-results {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.recommendation-results .results-intro {
+  text-align: center;
+}
+
+.recommendation-skin-type {
+  margin-top: 22px;
+  margin-bottom: 26px;
+}
+
+.recommendation-skin-type h3 {
+  margin: 9px 0 5px;
+}
+
+.recommendation-skin-type small {
+  color: #899288;
+  font-size: 12px;
+}
+
+.ingredient-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.ingredient-card {
+  background: #f7f8f3;
+  border: 1px solid #edf0e8;
+  border-radius: 13px;
+  padding: 18px;
+}
+
+.ingredient-card-top {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #71866a;
+}
+
+.ingredient-card-top svg {
+  flex-shrink: 0;
+}
+
+.ingredient-card h4 {
+  margin: 0;
+  color: #354438;
+  font-size: 15px;
+  font-weight: 650;
+  text-transform: capitalize;
+}
+
+.ingredient-card p {
+  color: #718071;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+
+.ingredient-card small {
+  display: block;
+  color: #899288;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.ingredient-card small strong {
+  color: #596b58;
+}
+
+.routine-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.routine-card {
+  background: #fafbf7;
+  border: 1px solid #e9ede4;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.routine-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #71866a;
+}
+
+.routine-heading h3 {
+  color: #354438;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.routine-card ol {
+  list-style: none;
+  padding: 0;
+  margin: 19px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.routine-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  color: #68766b;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.routine-step-number {
+  width: 23px;
+  height: 23px;
+  flex: 0 0 23px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eaf0e3;
+  color: #60765a;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.recommendation-notes {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #f7f8f3;
+}
+
+.recommendation-notes ul {
+  padding-left: 20px;
+  margin: 15px 0 0;
+  color: #718071;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.recommendation-results .results-disclaimer {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .scan-header {
+    height: 65px;
+    padding: 0 5%;
+  }
+
+  .scan-card,
+  .scan-results,
+  .recommendation-results {
+    padding: 18px;
+  }
+
+  .scan-guidelines ul {
+    grid-template-columns: 1fr;
+  }
+
+  .scan-main {
+    margin: 35px auto;
+  }
+
+  .skin-type-regions {
+    grid-template-columns: 1fr;
+  }
+
+  .regional-grid,
+  .ingredient-grid,
+  .routine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skin-age-card {
+    flex-wrap: wrap;
+  }
+
+  .recommendation-trigger {
+    padding: 18px;
+  }
+
+  .overall-score-card {
+    padding: 20px;
+  }
+
+  .overall-score-card strong {
+    font-size: 40px;
+  }
+}
